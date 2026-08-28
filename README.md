@@ -6,7 +6,7 @@
 
 [![License: MIT (modified)](https://img.shields.io/badge/License-MIT%20(modified)-yellow.svg)](LICENSE)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-blueviolet)](https://claude.ai)
-[![WeChat 4.1+](https://img.shields.io/badge/WeChat-4.x-brightgreen)](https://weixin.qq.com)
+[![WeChat 4.1+](https://img.shields.io/badge/WeChat-4.1%2B-brightgreen)](https://weixin.qq.com)
 
 <img src="doc/demo.svg" alt="向 Claude 提问，返回聊天记录时间线" width="720">
 
@@ -23,7 +23,7 @@
 | `_core` | 方案抓取二进制（仅 Windows）：仅 make_json 用，内置 frida，需管理员，体积大 |
 | `doc/demo.svg` | README 演示图 |
 
-**环境要求**：Windows + 微信 PC 4.x，Linux 未测试，暂不支持 macOS。
+**环境要求**：Windows + 微信 PC 4.1+，Linux 未测试，暂不支持 macOS。
 
 ## 数据安全
 
@@ -46,3 +46,5 @@
 - `wechat-to-ai` is released under a modified MIT license (see `LICENSE`) © [chengmarc](https://github.com/chengmarc), use and copy of the software are hereby granted free of charge. 
 
 - Reverse-engineering of our software is **strictly prohibited**. Any reverse-engineering attempt will consititute a direct violation of 17 U.S.C. §§1201(a)(1)(A) and 1201(a)(2), which prohibit unauthorized circumvention of technological measures that control access to copyright-protected works.
+
+- By downloading, installing, cloning, or forking this repository, you agree that you will fully comply to the rules stated above.
