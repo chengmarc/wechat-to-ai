@@ -1,26 +1,255 @@
-MIT License (Modified)
+                    WECHAT-TO-AI SOURCE-AVAILABLE LICENSE
+                              Version 1.0
 
-Copyright (c) 2026 Zhongmang (Marc) Cheng
+               SPDX-Identifier: LicenseRef-wechat-to-ai-1.0
+              Copyright (c) 2026 Zhongmang (Marc) Cheng
+                    All rights not granted are reserved.
 
-This is a modified version of the MIT License: it adds the reverse-engineering
-restriction stated below. It is NOT the standard OSI-approved MIT License.
+NOTICE: This License is derived from the MIT License and retains its
+permissive grant, but adds the definitions, conditions, restrictions, and
+terms set out below. It is NOT the OSI-approved MIT License, and must not be
+described, redistributed, or catalogued as "MIT". Where a machine-readable
+license identifier is required, use "LicenseRef-wechat-to-ai-1.0" or
+"SEE LICENSE IN LICENSE".
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+--------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------
 
-- Reverse-engineering of our software is strictly prohibited.
+1.1  "Software" means the wechat-to-ai project, comprising the skill
+     definitions, documentation, plugin manifests, marketplace manifests,
+     and the compiled binary artifacts distributed in this repository,
+     together with any updates supplied by the Licensor.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1.2  "Licensor" means Zhongmang (Marc) Cheng, the copyright holder.
+
+1.3  "You" means the individual or legal entity exercising any right
+     granted by this License.
+
+1.4  "Operator Data" means data that (a) resides on the local machine on
+     which You execute the Software, and (b) belongs to, or was lawfully
+     received by, the natural person operating that machine.
+
+1.5  "Local Execution" means execution wholly on hardware controlled by
+     You, without transmission of Operator Data to the Licensor or to any
+     third party.
+
+--------------------------------------------------------------------------
+2. GRANT OF LICENSE
+--------------------------------------------------------------------------
+
+2.1  Subject to Sections 3 through 6, the Licensor hereby grants You, free
+     of charge, a worldwide, royalty-free, non-exclusive, perpetual licence
+     to use, copy, modify, merge, publish, distribute, sublicense, and/or
+     sell copies of the Software, and to permit persons to whom the
+     Software is furnished to do so.
+
+2.2  The grant in Section 2.1 includes a licence under any copyright owned
+     or controlled by the Licensor that is necessarily infringed by the
+     permitted exercise of that grant.
+
+2.3  No patent licence is granted except as required by operation of law.
+
+--------------------------------------------------------------------------
+3. CONDITIONS
+--------------------------------------------------------------------------
+
+3.1  The above copyright notice, this permission notice, and the whole of
+     this License shall be included in all copies or substantial portions
+     of the Software.
+
+3.2  Modified copies distributed to third parties must be marked as
+     modified and must not be presented as the unmodified Software.
+
+3.3  This License must not be replaced with, or represented as, the
+     unmodified MIT License in any redistribution, package manifest, or
+     repository metadata.
+
+--------------------------------------------------------------------------
+4. RESTRICTIONS
+--------------------------------------------------------------------------
+
+4.1  Except to the extent expressly permitted by Section 4.2, You shall not
+     reverse-engineer, decompile, disassemble, or otherwise attempt to
+     derive the source code, internal structure, or internal algorithms of
+     the compiled binary artifacts distributed with the Software.
+
+4.2  STATUTORY RESERVATIONS. Section 4.1 does not apply to, limit, or
+     purport to waive any act that applicable law permits notwithstanding
+     contractual restriction. Without limiting the generality of the
+     foregoing, Section 4.1 does NOT apply to:
+
+     (a)  acts of reverse engineering for the sole purpose of achieving
+          interoperability of an independently created program, as
+          permitted by Article 6 of Directive 2009/24/EC of the European
+          Parliament and of the Council, the exercise of which Article 8
+          of that Directive renders incapable of contractual exclusion;
+
+     (b)  acts within the interoperability exception at 17 U.S.C.
+          section 1201(f), the encryption research exception at 17 U.S.C.
+          section 1201(g), or the security testing exception at 17 U.S.C.
+          section 1201(j);
+
+     (c)  acts within sections 30.6 (interoperability), 30.61 (encryption
+          research), 41.12 (encryption research), or 41.13 (security) of
+          the Copyright Act, R.S.C. 1985, c. C-42 (Canada);
+
+     (d)  any other act that applicable mandatory law reserves to You.
+
+     The Licensor makes no claim under any statute to restrict acts falling
+     within this Section 4.2, and any provision of this License that would
+     do so is severed as to those acts pursuant to Section 13.1.
+
+4.3  You shall not use the Software to access, acquire, or process data
+     that is not Operator Data. Use of the Software against an account,
+     device, or data store that You are not authorised to access is a
+     material breach of this License and falls outside the scope of the
+     grant in Section 2.1.
+
+4.4  You shall not remove, obscure, or alter the notices required by
+     Section 3.1 or the declarations of non-affiliation in Section 5.
+
+--------------------------------------------------------------------------
+5. TRADEMARKS AND NON-AFFILIATION
+--------------------------------------------------------------------------
+
+5.1  This License grants no right to use the trade names, trademarks,
+     service marks, or product names of the Licensor, except as required
+     for reasonable and customary attribution.
+
+5.2  The Software is not affiliated with, endorsed by, sponsored by, or in
+     any way officially connected to Tencent Holdings Limited, Shenzhen
+     Tencent Computer Systems Company Limited, or any of their subsidiaries
+     or affiliates. "WeChat", "Weixin", and "微信" are trademarks of their
+     respective owners. All references to those marks in the Software and
+     its documentation are nominative references made solely to identify
+     the data format with which the Software interoperates, and are not
+     claims of origin, association, or endorsement.
+
+5.3  The Software contains no source code, object code, asset, or other
+     copyrightable material owned by Tencent Holdings Limited or any of its
+     affiliates.
+
+--------------------------------------------------------------------------
+6. PERMITTED USE AND USER RESPONSIBILITIES
+--------------------------------------------------------------------------
+
+6.1  The Software is furnished for Local Execution against Operator Data,
+     for the purpose of enabling a natural person to obtain a portable,
+     machine-readable copy of their own communications records.
+
+6.2  You are solely responsible for determining the lawfulness of Your use
+     of the Software in Your jurisdiction and for obtaining any consent or
+     authorisation that such use requires.
+
+6.3  The Licensor does not receive, transmit, store, process, or have any
+     means of access to Operator Data. The Software performs no network
+     transmission of Operator Data.
+
+--------------------------------------------------------------------------
+7. DISCLAIMER OF WARRANTY
+--------------------------------------------------------------------------
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NONINFRINGEMENT. THE LICENSOR
+DOES NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR-FREE, THAT
+IT WILL BE COMPATIBLE WITH ANY PARTICULAR VERSION OF ANY THIRD-PARTY
+APPLICATION, OR THAT ITS USE WILL NOT RESULT IN LOSS OR CORRUPTION OF DATA.
+
+--------------------------------------------------------------------------
+8. LIMITATION OF LIABILITY
+--------------------------------------------------------------------------
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT (INCLUDING NEGLIGENCE), OR
+OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE, INCLUDING WITHOUT LIMITATION ANY LOSS
+OF DATA, LOSS OF PROFITS, BUSINESS INTERRUPTION, ACCOUNT SUSPENSION OR
+TERMINATION BY A THIRD-PARTY SERVICE PROVIDER, OR ANY INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGES. NOTHING IN THIS SECTION EXCLUDES LIABILITY
+THAT CANNOT LAWFULLY BE EXCLUDED.
+
+--------------------------------------------------------------------------
+9. INDEMNIFICATION
+--------------------------------------------------------------------------
+
+You shall indemnify, defend, and hold harmless the Licensor from and against
+any claim, demand, proceeding, loss, or expense (including reasonable legal
+fees) arising out of Your use of the Software in breach of Section 4.3 or
+Section 6.2.
+
+--------------------------------------------------------------------------
+10. EXPORT CONTROL AND SANCTIONS
+--------------------------------------------------------------------------
+
+You shall comply with all applicable export control, economic sanctions, and
+import laws in Your exercise of the rights granted by this License. You
+represent that You are not a person or entity with whom transactions are
+prohibited under such laws.
+
+--------------------------------------------------------------------------
+11. TERM AND TERMINATION
+--------------------------------------------------------------------------
+
+11.1 This License is effective until terminated.
+
+11.2 The rights granted in Section 2.1 terminate automatically upon Your
+     material breach of Section 3.1, 4.3, or 4.4, if that breach is not
+     cured within thirty (30) days of You becoming aware of it.
+
+11.3 Sections 5, 7, 8, 9, 10, 12, and 13 survive termination.
+
+11.4 Termination of Your licence does not affect the licence of any
+     downstream recipient who is not in breach.
+
+--------------------------------------------------------------------------
+12. GOVERNING LAW AND FORUM
+--------------------------------------------------------------------------
+
+12.1 This License is governed by and construed in accordance with the laws
+     of the Province of Ontario and the federal laws of Canada applicable
+     therein, without regard to conflict-of-laws principles.
+
+12.2 The courts of the Province of Ontario, Canada shall have exclusive
+     jurisdiction over any dispute arising out of or in connection with this
+     License, and the parties irrevocably attorn to that jurisdiction.
+
+12.3 The United Nations Convention on Contracts for the International Sale
+     of Goods does not apply to this License.
+
+12.4 Sections 12.1 and 12.2 do not deprive a consumer of the protection
+     afforded by mandatory provisions of the law of that consumer's habitual
+     residence.
+
+--------------------------------------------------------------------------
+13. GENERAL
+--------------------------------------------------------------------------
+
+13.1 SEVERABILITY. If any provision of this License is held unenforceable,
+     that provision shall be modified to the minimum extent necessary to
+     make it enforceable, or, if it cannot be so modified, severed. The
+     remaining provisions continue in full force.
+
+13.2 NO WAIVER. Failure to enforce any provision is not a waiver of it.
+
+13.3 ENTIRE AGREEMENT. This License is the entire agreement between You and
+     the Licensor concerning the Software and supersedes all prior
+     understandings relating to its subject matter.
+
+13.4 LANGUAGE. This License is drafted in English. Any translation is
+     provided for convenience only; in the event of conflict, the English
+     text governs. Les parties ont exigé que la présente licence soit
+     rédigée en anglais.
+
+--------------------------------------------------------------------------
+14. ACCEPTANCE
+--------------------------------------------------------------------------
+
+By downloading, installing, executing, cloning, forking, or otherwise
+exercising any right granted herein, You accept this License and agree to be
+bound by it. If You do not accept this License, You have no licence to the
+Software and must not exercise any right granted herein.
+
+                                  * * *

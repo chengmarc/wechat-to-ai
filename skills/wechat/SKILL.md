@@ -12,7 +12,7 @@ description: 在本地查询、导出微信 4.1+ 聊天记录为 AI 可读文本
 ## 前置检查（每次会话第一步）
 
 ```powershell
-& "$env:CLAUDE_PLUGIN_ROOT\_common" preflight
+& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" preflight
 ```
 
 - 结尾打印 `READY` 和 `BUILT_DB_DIR=<路径>`：记住该路径，下文所有 `<BUILT_DB_DIR>` 都用它。
@@ -27,7 +27,7 @@ description: 在本地查询、导出微信 4.1+ 聊天记录为 AI 可读文本
 > 首次使用且无方案文件时，先生成方案清单。**微信必须已登录运行**，且以**管理员权限**执行：
 > ```powershell
 > $env:WECHAT_CORE_HOME = "<CORE_HOME>"
-> & "$env:CLAUDE_PLUGIN_ROOT\_core" make_json
+> & "$env:CLAUDE_PLUGIN_ROOT\_core.exe" make_json
 > ```
 > 运行后**在微信里逐个点开聊天（新旧都开）、联系人、收藏、朋友圈并搜索**——每个库的
 > 数据准备只会在相关内容被打开时逐步覆盖，浏览得越全，抓到的库越全。它会实时打印 `[SOLUTION] <库名>`，
@@ -52,7 +52,7 @@ description: 在本地查询、导出微信 4.1+ 聊天记录为 AI 可读文本
 ### A1 — 查找联系人 + 生成 sender_map
 
 ```powershell
-& "$env:CLAUDE_PLUGIN_ROOT\_common" find_private <关键词> --built-db-dir "<BUILT_DB_DIR>"
+& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" find_private <关键词> --built-db-dir "<BUILT_DB_DIR>"
 ```
 
 输出：wxid、消息表名、各库消息量与日期范围、sender_map 推断结果（含采样消息），以及一条即用的 `export_private` 命令。
@@ -71,7 +71,7 @@ find_private 会为每个库打印推断出的「用户 / 对方」及其样本�
 stdout + stderr 必须一起重定向到文件，**绝不能让内容进入上下文窗口**：
 
 ```powershell
-& "$env:CLAUDE_PLUGIN_ROOT\_common" export_private `
+& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" export_private `
   --db <各库路径…> --table <Msg_...> --sender-map "<ARTIFACTS_DIR>\sender_map_<名字>.json" `
   > "<ARTIFACTS_DIR>\chat_<名字>.txt" 2>&1
 ```
@@ -89,13 +89,13 @@ stdout + stderr 必须一起重定向到文件，**绝不能让内容进入上�
 ### B1 — 查找群
 
 ```powershell
-& "$env:CLAUDE_PLUGIN_ROOT\_common" find_chatroom <关键词> --built-db-dir "<BUILT_DB_DIR>"
+& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" find_chatroom <关键词> --built-db-dir "<BUILT_DB_DIR>"
 ```
 
 ### B2 — 运行导出命令（默认最近 1 天）
 
 ```powershell
-& "$env:CLAUDE_PLUGIN_ROOT\_common" export_chatroom `
+& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" export_chatroom `
   --db <单个库路径> --table <Msg_...> `
   --contact-db "<BUILT_DB_DIR>\contact\contact.db" `
   --id-map "<ARTIFACTS_DIR>\id_map_<群名>.json" `
@@ -109,9 +109,9 @@ stdout + stderr 必须一起重定向到文件，**绝不能让内容进入上�
 ## C. 联系人扫描
 
 ```powershell
-& "$env:CLAUDE_PLUGIN_ROOT\_common" find_contact <关键词> --built-db-dir "<BUILT_DB_DIR>"
+& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" find_contact <关键词> --built-db-dir "<BUILT_DB_DIR>"
 
-& "$env:CLAUDE_PLUGIN_ROOT\_common" export_contacts `
+& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" export_contacts `
   --contact-db "<BUILT_DB_DIR>\contact\contact.db" `
   --msg-dbs "<BUILT_DB_DIR>\message\message_*.db" `
   > "<ARTIFACTS_DIR>\contacts.txt" 2>&1
@@ -125,6 +125,6 @@ stdout + stderr 必须一起重定向到文件，**绝不能让内容进入上�
 
 - `export_*` 的输出**必须** `> "<ARTIFACTS_DIR>\xxx.txt" 2>&1`，禁止裸跑让内容进上下文。
 - `find_*` 的输出可以正常读取、展示给用户。
-- 所有子命令用 `& "$env:CLAUDE_PLUGIN_ROOT\_common" <命令>` 调用。
+- 所有子命令用 `& "$env:CLAUDE_PLUGIN_ROOT\_common.exe" <命令>` 调用。
 - 不要手写相对 `output\` 路径；优先直接复制 `preflight` / `find_*` 打印出的完整命令。
 - 时区默认 GMT+8，`--tz` 调整。
