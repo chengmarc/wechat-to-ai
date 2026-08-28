@@ -1,0 +1,17 @@
+{
+  "name": "chengmarc",
+  "description": "chengmarc 的 Claude Code 插件市场。",
+  "owner": { "name": "chengmarc", "url": "https://github.com/chengmarc" },
+  "plugins": [
+    {
+      "name": "wechat-to-ai",
+      "source": "./",
+      "displayName": "微信.skill",
+      "description": "让 Claude 在本地读懂你的微信：查询、导出微信 4.x 聊天记录为 AI 可读文本。",
+      "version": "0.2.0",
+      "homepage": "https://github.com/chengmarc/wechat-to-ai",
+      "license": "MIT",
+      "keywords": ["wechat", "chat-export", "ai", "claude"]
+    }
+  ]
+}

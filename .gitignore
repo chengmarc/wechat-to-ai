@@ -1,0 +1,16 @@
+.claude/
+.codex/
+
+src/
+output/
+
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# build artifacts — repo ships _common + _core; _src and intermediates stay local
+_src
+_common.exe
+_core.exe
+build_nuitka/
+nuitka-crash-report.xml
