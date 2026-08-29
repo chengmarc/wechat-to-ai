@@ -73,4 +73,9 @@
 - 没查到消息时，优先确认是否已经重新执行过 Step 0 更新数据
 - 时间范围默认用本地时区，默认 `GMT+8`
 
-**`export_*` 的 stdout + stderr 必须一并重定向到文件**（`> "<ARTIFACTS_DIR>\xxx.txt" 2>&1`），不得进入上下文窗口。
+**`export_*` 的 stdout 与 stderr 必须分别重定向到文件**
+（`> "<ARTIFACTS_DIR>\xxx.txt" 2> "<ARTIFACTS_DIR>\xxx.err.txt"`），不得进入上下文窗口。
+不要用 `2>&1`：PowerShell 5.1 会把原生 stderr 包装成 `NativeCommandError` 写进聊天文件开头。
+
+`find_*` 打印的导出命令，开头的 `…\Temp\onefile_*\python.exe` 是 onefile 临时解包路径，
+进程退出即失效；调用时一律换成 `& "$env:CLAUDE_PLUGIN_ROOT\_common.exe"`。
