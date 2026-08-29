@@ -7,29 +7,41 @@
 [![License: Source-Available](https://img.shields.io/badge/License-Source--Available-yellow.svg)](LICENSE)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-blueviolet)](https://claude.ai)
 ![WeChat 4.1+](https://img.shields.io/badge/WeChat-4.1%2B-brightgreen)
+![Platform: Windows](https://img.shields.io/badge/Platform-Windows-0078d4)
 
-<img src="doc/demo.svg" alt="向 Claude 提问，返回聊天记录时间线" width="720">
+<img src="doc/demo.svg" alt="让 Claude 导出并总结微信群聊，输出可直接发回微信的中文摘要" width="720"></div>
 
-</div>
+## 安装
 
-## 目录说明
+需要 **Windows, 微信 PC 4.1+, [Claude Code](https://claude.com/claude-code)**。
+在 Claude Code 里执行：
 
-| 路径 | 用途 |
-|---|---|
-| `.claude-plugin/` | 插件清单 `plugin.json` + 自托管市场 `marketplace.json` |
-| `skills/wechat/` | 主技能：`SKILL.md` + 操作参考 |
-| `skills/wechat-summary/` | 群聊总结模板 |
-| `_common.exe` | 通用构建工具，体积小 |
-| `_core.exe` | 核心构建工具，体积大，需管理员 |
-| `doc/demo.svg` | README 演示图 |
+```
+/plugin marketplace add chengmarc/wechat-to-ai
+/plugin install wechat-to-ai@chengmarc
+```
 
-**环境要求**：Windows + 微信 PC 4.1+，Linux 未测试，暂不支持 macOS。
+> 装好后不需要记任何命令，直接说人话就行。
+
+## 首次使用
+
+1. **保持微信登录**，然后对 Claude 说「帮我准备微信数据」。
+2. Claude 会跑 `preflight` 自检，并把接下来该做什么逐条告诉你。
+3. 建库这一步需要**以管理员权限**运行一次。运行期间，请在微信里**逐个点开聊天
+   （新旧都开）、联系人、收藏、朋友圈并搜索** —— 微信只在相关内容被打开时才准备
+   对应的数据，浏览得越全，能读到的记录越全。
+4. 之后想拿到最新消息，重跑一次建库即可，日常使用直接提问。
+
+> **Windows Defender 等杀毒软件会将本程序标记为可疑，需要手动放行。**
 
 ## 数据安全
 
 - **数据不离机**：构建数据库、查询、导出全部在本地进程完成，没有任何网络上传。
-- **杀毒软件**：Windows Defender 等会将此程序标记为可疑，需手动放行。
-- 仅用于 **在本地** 读取 **你自己的** 微信数据，遵守相关法律法规，不得用于未经授权的数据访问。
+- **无遥测**：不含任何统计、崩溃上报或更新通道；维护者在技术上无法接触到你的任何数据。
+- **仅限自用**：仅用于 **在本地** 读取 **你自己的** 微信数据，遵守相关法律法规，
+  不得用于未经授权的数据访问。
+
+> 完整的法律声明、数据可携权依据与引用来源见下方 **Declarations**。
 
 ---
 
@@ -77,7 +89,7 @@ attributed as such.*
 3.5 Taken together, the cited record describes a platform whose servers can read
 message content, that uses content analysis in censorship workflows, that has been
 assessed by a G7 government as posing unacceptable privacy and security risk, and
-that does not provide users with a complete huamn-readable export of their own
+that does not provide users with a complete human-readable export of their own
 records.
 
 **Sources:** [3.1](https://citizenlab.ca/research/we-chat-they-watch/) ·
@@ -99,11 +111,6 @@ to that provider's terms and to United States law.
 
 4.4 The Software is not offered for distribution within the People's Republic of
 China and is not represented as compliant with that jurisdiction's requirements.
-
-4.5 The maintainer does not accept service by email, repository issue, pull
-request, or other informal channel. Formal service on a party resident in Canada
-must comply with the Hague Service Convention and the Ontario *Rules of Civil
-Procedure*. Correspondence must be in English.
 
 ### §5 — Non-affiliation and trademarks
 

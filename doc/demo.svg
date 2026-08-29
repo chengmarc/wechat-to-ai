@@ -1,48 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" role="img" aria-label="演示：向 Claude 提问后返回聊天记录时间线">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 774" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" role="img" aria-label="演示：让 Claude 检索双人会话并总结微信群聊，全程本地运行">
   <style>
-    .win  { fill:#0d1117; stroke:#30363d; stroke-width:1; }
-    .bar  { fill:#161b22; }
-    .t    { fill:#c9d1d9; font-size:20px; white-space:pre; }
-    .u    { fill:#7ee787; }
-    .c    { fill:#79c0ff; }
-    .dim  { fill:#8b949e; }
-    .ttl  { fill:#8b949e; font-size:12px; }
-    .line { opacity:0; }
-    .l1 { animation:l1 13s infinite; }
-    .l2 { animation:l2 13s infinite; }
-    .l3 { animation:l3 13s infinite; }
-    .l4 { animation:l4 13s infinite; }
-    .l5 { animation:l5 13s infinite; }
-    .l6 { animation:l6 13s infinite; }
-    .l7 { animation:l7 13s infinite; }
-    .caret { animation:blink 1s step-end infinite, l2 13s infinite; }
+    .win { fill:#0d1117; stroke:#30363d; stroke-width:1; }
+    .bar { fill:#161b22; }
+    .t   { fill:#c9d1d9; font-size:20px; white-space:pre; }
+    .u   { fill:#7ee787; }
+    .c   { fill:#79c0ff; }
+    .h   { fill:#e6edf3; font-weight:600; }
+    .k   { fill:#d29922; }
+    .dim { fill:#8b949e; }
+    .ttl { fill:#8b949e; font-size:12px; }
+    .caret { fill:#7ee787; animation:blink 1s step-end infinite; }
     @keyframes blink { 0%,49%{fill-opacity:1} 50%,100%{fill-opacity:0} }
-    @keyframes l1 { 0%,3%{opacity:0} 6%,86%{opacity:1} 92%,100%{opacity:0} }
-    @keyframes l2 { 0%,7%{opacity:0} 10%,86%{opacity:1} 92%,100%{opacity:0} }
-    @keyframes l3 { 0%,20%{opacity:0} 24%,86%{opacity:1} 92%,100%{opacity:0} }
-    @keyframes l4 { 0%,27%{opacity:0} 31%,86%{opacity:1} 92%,100%{opacity:0} }
-    @keyframes l5 { 0%,34%{opacity:0} 38%,86%{opacity:1} 92%,100%{opacity:0} }
-    @keyframes l6 { 0%,41%{opacity:0} 45%,86%{opacity:1} 92%,100%{opacity:0} }
-    @keyframes l7 { 0%,50%{opacity:0} 54%,86%{opacity:1} 92%,100%{opacity:0} }
+    .sa0 { animation:sa0 29.7s infinite; }
+    @keyframes sa0 { 0%,2.36%{opacity:0} 4.71%,27.71%{opacity:1} 34.78%,100%{opacity:0} }
+    .sa1 { animation:sa1 29.7s infinite; }
+    @keyframes sa1 { 0%,5.07%{opacity:0} 7.42%,27.71%{opacity:1} 34.78%,100%{opacity:0} }
+    .sa2 { animation:sa2 29.7s infinite; }
+    @keyframes sa2 { 0%,7.78%{opacity:0} 10.13%,27.71%{opacity:1} 34.78%,100%{opacity:0} }
+    .sa3 { animation:sa3 29.7s infinite; }
+    @keyframes sa3 { 0%,10.49%{opacity:0} 12.85%,27.71%{opacity:1} 34.78%,100%{opacity:0} }
+    .sa4 { animation:sa4 29.7s infinite; }
+    @keyframes sa4 { 0%,13.20%{opacity:0} 15.56%,27.71%{opacity:1} 34.78%,100%{opacity:0} }
+    .sa5 { animation:sa5 29.7s infinite; }
+    @keyframes sa5 { 0%,15.91%{opacity:0} 18.27%,27.71%{opacity:1} 34.78%,100%{opacity:0} }
+    .sa6 { animation:sa6 29.7s infinite; }
+    @keyframes sa6 { 0%,18.62%{opacity:0} 20.98%,27.71%{opacity:1} 34.78%,100%{opacity:0} }
+    .sb0 { animation:sb0 29.7s infinite; }
+    @keyframes sb0 { 0%,38.15%{opacity:0} 40.51%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb1 { animation:sb1 29.7s infinite; }
+    @keyframes sb1 { 0%,40.86%{opacity:0} 43.22%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb2 { animation:sb2 29.7s infinite; }
+    @keyframes sb2 { 0%,43.57%{opacity:0} 45.93%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb3 { animation:sb3 29.7s infinite; }
+    @keyframes sb3 { 0%,46.28%{opacity:0} 48.64%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb4 { animation:sb4 29.7s infinite; }
+    @keyframes sb4 { 0%,48.99%{opacity:0} 51.35%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb5 { animation:sb5 29.7s infinite; }
+    @keyframes sb5 { 0%,51.70%{opacity:0} 54.06%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb6 { animation:sb6 29.7s infinite; }
+    @keyframes sb6 { 0%,54.41%{opacity:0} 56.77%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb7 { animation:sb7 29.7s infinite; }
+    @keyframes sb7 { 0%,57.12%{opacity:0} 59.48%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb8 { animation:sb8 29.7s infinite; }
+    @keyframes sb8 { 0%,59.83%{opacity:0} 62.19%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb9 { animation:sb9 29.7s infinite; }
+    @keyframes sb9 { 0%,62.54%{opacity:0} 64.90%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb10 { animation:sb10 29.7s infinite; }
+    @keyframes sb10 { 0%,65.25%{opacity:0} 67.61%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb11 { animation:sb11 29.7s infinite; }
+    @keyframes sb11 { 0%,67.96%{opacity:0} 70.32%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb12 { animation:sb12 29.7s infinite; }
+    @keyframes sb12 { 0%,70.67%{opacity:0} 73.03%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb13 { animation:sb13 29.7s infinite; }
+    @keyframes sb13 { 0%,73.38%{opacity:0} 75.74%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb14 { animation:sb14 29.7s infinite; }
+    @keyframes sb14 { 0%,76.09%{opacity:0} 78.45%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb15 { animation:sb15 29.7s infinite; }
+    @keyframes sb15 { 0%,78.80%{opacity:0} 81.16%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
+    .sb16 { animation:sb16 29.7s infinite; }
+    @keyframes sb16 { 0%,81.52%{opacity:0} 83.87%,90.61%{opacity:1} 97.68%,100%{opacity:0} }
   </style>
 
-  <rect class="win" x="0.5" y="0.5" width="759" height="379" rx="8"/>
-  <rect class="bar" x="0.5" y="0.5" width="759" height="34" rx="8"/>
-  <rect class="bar" x="0.5" y="18" width="759" height="17"/>
+  <rect class="win" x="0.5" y="0.5" width="939" height="773" rx="8"/>
+  <rect class="bar" x="0.5" y="0.5" width="939" height="34" rx="8"/>
+  <rect class="bar" x="0.5" y="18" width="939" height="16"/>
   <circle cx="20" cy="17.5" r="5" fill="#ff5f56"/>
   <circle cx="38" cy="17.5" r="5" fill="#ffbd2e"/>
   <circle cx="56" cy="17.5" r="5" fill="#27c93f"/>
-  <text class="ttl" x="380" y="22" text-anchor="middle">wechat-to-ai  ·  Claude Code</text>
+  <text class="ttl" x="470" y="22" text-anchor="middle">wechat-to-ai  ·  Claude Code</text>
 
-  <g transform="translate(22,64)">
-    <text class="t line l1" x="0"  y="0"><tspan class="u">你     ❯</tspan> 帮我找和张雪峰的聊天，他说过「我不会走的」</text>
-    <text class="t line l2" x="0"  y="24" xml:space="preserve">         大概是去年冬天<tspan class="caret" dx="2">▋</tspan></text>
-
-    <text class="t line l3" x="0"  y="72"><tspan class="c">Claude ❯</tspan> <tspan class="dim">扫描 6,412 条消息，找到 1 条匹配。</tspan></text>
-    <text class="t line l4" x="0"  y="108">         2024-12-07 23:14</text>
-    <text class="t line l5" x="0"  y="136">         <tspan class="dim">张雪峰：</tspan>你跑不过我你信吗？我不会走的！</text>
-    <text class="t line l6" x="0"  y="164">         <tspan class="dim">上下文：</tspan>前一条消息是「我三口一根巧乐兹」，你们在聊吃雪糕</text>
-
-    <text class="t line l7" x="0"  y="212"><tspan class="dim">→ 已写入 聊天记录/张雪峰.txt</tspan></text>
+  <g transform="translate(22,62)">
+    <text class="t sa0" x="0" y="0"><tspan class="u">你     ❯</tspan> 帮我找和张雪峰的聊天，他说过「我不会走的」</text>
+    <text class="t sa1" x="0" y="24" xml:space="preserve">         大概是去年冬天<tspan class="caret" dx="2">▋</tspan></text>
+    <text class="t sa2" x="0" y="72"><tspan class="c">Claude ❯</tspan> <tspan class="dim">扫描 6,412 条消息，找到 1 条匹配。</tspan></text>
+    <text class="t sa3" x="0" y="108">         2024-12-07 23:14</text>
+    <text class="t sa4" x="0" y="136">         <tspan class="dim">张雪峰：</tspan>你跑不过我你信吗？我不会走的！</text>
+    <text class="t sa5" x="0" y="164">         <tspan class="dim">上下文：</tspan>前一条消息是「我三口一根巧乐兹」，你们在聊吃雪糕</text>
+    <text class="t sa6" x="0" y="212"><tspan class="dim">→ 已写入 聊天记录/张雪峰.txt</tspan></text>
+    <text class="t sb0" x="0" y="0" xml:space="preserve"><tspan class="u">你     ❯ </tspan>把群聊 “疯狂星期四” 的消息总结一下，我要发回群里<tspan class="caret">▋</tspan></text>
+    <text class="t sb1" x="0" y="62" xml:space="preserve"><tspan class="c">Claude ❯ </tspan><tspan class="dim">已导出 1,933 条消息 · 27 位发言人 · 正在总结…</tspan></text>
+    <text class="t sb2" x="0" y="124" xml:space="preserve"><tspan class="h">📝 群聊动态摘要 (2026-08-28)</tspan></text>
+    <text class="t sb3" x="0" y="155" xml:space="preserve">本次覆盖 1933 条消息。首条消息：“v我50 咕咕嘎嘎”；末条消息：“这臭企鹅一天到晚说什么呢”</text>
+    <text class="t sb4" x="0" y="217" xml:space="preserve"><tspan class="h">1️⃣ 【孙宇晨 景甜 长文吃瓜贯穿全天】</tspan></text>
+    <text class="t sb5" x="0" y="248" xml:space="preserve">群友 “做爱王” 一早读完《我的女友景甜》带进群，群内十余人接力围观，</text>
+    <text class="t sb6" x="0" y="279" xml:space="preserve">从 “妈妈” 称呼聊到 5000 万美元与 3000 万彩礼。</text>
+    <text class="t sb7" x="0" y="310" xml:space="preserve"><tspan class="k">[传送门搜索]:我的女友景甜</tspan></text>
+    <text class="t sb8" x="0" y="372" xml:space="preserve"><tspan class="h">2️⃣ 【GTA VI 实机演示引发关注】</tspan></text>
+    <text class="t sb9" x="0" y="403" xml:space="preserve">群友 “游戏王不如原神” 起头问有没有人关注，后续多个群友一同讨论，</text>
+    <text class="t sb10" x="0" y="434" xml:space="preserve">群友 “孙笑川是我爹” 上图，并仔细拆解演示细节。</text>
+    <text class="t sb11" x="0" y="465" xml:space="preserve"><tspan class="k">[传送门搜索]:佛罗里达不养闲人</tspan></text>
+    <text class="t sb12" x="0" y="527" xml:space="preserve"><tspan class="h">3️⃣ 【NASDAQ 以及 Claude 上市相关新闻】</tspan></text>
+    <text class="t sb13" x="0" y="558" xml:space="preserve">群友 “吉吉国王” 分享 Claude 相关新闻，后续引发讨论，</text>
+    <text class="t sb14" x="0" y="589" xml:space="preserve">群友 “马斯克点赞华为” 抱怨自己投资 Tesla 后股价破发。</text>
+    <text class="t sb15" x="0" y="620" xml:space="preserve"><tspan class="k">[传送门搜索]:誓死效忠 NASDAQ</tspan></text>
+    <text class="t sb16" x="0" y="682" xml:space="preserve"><tspan class="dim">→ 无列表符号 · 可直接粘贴回微信，不被折叠</tspan></text>
   </g>
 </svg>
