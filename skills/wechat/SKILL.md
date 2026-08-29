@@ -15,6 +15,15 @@ description: 在本地查询、导出微信 4.1+ 聊天记录为 AI 可读文本
 & "$env:CLAUDE_PLUGIN_ROOT\_common.exe" preflight
 ```
 
+> **本 skill 的每一条命令都是 PowerShell。** 全新的工作目录默认不带 PowerShell 执行权限，
+> 第一条命令就会被权限提示拦住。这时**不要**改用 Bash 重写（`&` 调用与 `$env:` 语法在 Bash 下
+> 不成立），也不要放弃，而是用自然语言告诉用户：
+>
+> > 这个插件的命令都要用 PowerShell 跑。请在弹出的权限提示里选「允许」——
+> > 如果有「始终允许 / 不再询问」，选它就不会再被打断。也可以用 `/permissions` 管理。
+>
+> 得到许可后从 `preflight` 重新开始。
+
 - 结尾打印 `READY` 和 `BUILT_DB_DIR=<路径>`：记住该路径，下文所有 `<BUILT_DB_DIR>` 都用它。
 - 同时打印 `ARTIFACTS_DIR=<路径>`：记住该路径，下文所有 `<ARTIFACTS_DIR>` 都用它。
 - 同时打印 `BUILD_DB_CMD=<命令>`：`make_db` 的命令内容，路径已拼好。**但不要直接跑**，见 Step 0b。
