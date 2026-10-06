@@ -1,7 +1,7 @@
 {
   "name": "wechat-to-ai",
   "displayName": "微信.skill",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "让 Claude 在本地读懂你的微信：查询、导出微信 4.1+ 聊天记录为 AI 可读文本，全程本地运行。",
   "author": { "name": "chengmarc", "url": "https://github.com/chengmarc" },
   "homepage": "https://github.com/chengmarc/wechat-to-ai",
@@ -9,11 +9,26 @@
   "license": "SEE LICENSE IN LICENSE",
   "keywords": [
     "wechat",
+    "weixin",
+    "windows",
+    "claude-code",
+    "claude-code-plugin",
+    "claude-skill",
     "chat-export",
-    "ai",
-    "claude",
-    "sqlcipher",
-    "data-portability",
-    "local-first"
+    "chat-history",
+    "wechat-export",
+    "chat-backup",
+    "chat-summary",
+    "privacy",
+    "local-first",
+    "offline",
+    "chinese",
+    "微信",
+    "聊天记录",
+    "聊天记录导出",
+    "聊天记录备份",
+    "电脑版微信",
+    "群聊总结",
+    "本地"
   ]
 }
