@@ -1,0 +1,15 @@
+.claude/
+.codex/
+
+*.egg-info/
+__pycache__/
+.pytest_cache/
+
+# 源码不入库（加密后随 dist/src 分发）
+src/
+
+# 构建中间产物不入库
+tools/target/
+
+# 分发物全部入库，随插件一起分发
+!dist/

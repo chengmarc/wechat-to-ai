@@ -1,0 +1,15 @@
+# 发布工具：build-core 编译 dist\core.exe，src-zip 打包 dist\src。
+# 平铺布局，不设 src/；入口是 main.rs。用法见 main.rs。
+[package]
+name = "tools"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "tools"
+path = "main.rs"
+
+[dependencies]
+rpassword = "7.5.4"
+zip = { version = "8.6.0", default-features = false, features = ["aes-crypto", "deflate"] }
