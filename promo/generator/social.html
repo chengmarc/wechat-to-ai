@@ -4,7 +4,8 @@
      on the left; on the right the README's demo (docs/demo.svg), stopped on its group-chat summary: its words and colours
      are copied from there, so change them together. Of the summary's three topics it shows the second and third,
      numbered 1 and 2; the first is gossip about real people, which a public card shouldn't carry. GitHub crops a little off the edges in places, so everything
-     stays 56px clear of them. -->
+     stays 56px clear of them, except the terminal, which runs off the right and the bottom so the card has no empty
+     margin. -->
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -32,34 +33,29 @@
   }
   .brand { background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-  /* The caption: icon beside the name and its line, the hook, and the facts. */
-  .caption { position: absolute; left: 64px; top: 0; bottom: 0; width: 420px; display: flex; flex-direction: column; justify-content: center; }
+  /* The caption: icon beside the name and its line, the hook, and the badges. */
+  .caption { position: absolute; left: 64px; top: 0; bottom: 0; width: 430px; display: flex; flex-direction: column; justify-content: center; }
   .app { display: flex; align-items: center; gap: 18px; }
-  .app img { width: 84px; height: 84px; filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5)); }
-  .app b { display: block; font-size: 40px; line-height: 1.1; font-weight: 700; letter-spacing: -0.01em; }
-  .app small { display: block; margin-top: 4px; font-size: 20px; font-weight: 500; color: rgba(255, 255, 255, 0.75); }
-  h1 { margin: 40px 0 0; font-size: 50px; line-height: 1.22; font-weight: 700; }
-  .caption p { margin: 18px 0 0; font-size: 19px; line-height: 1.6; color: rgba(255, 255, 255, 0.78); }
-  .facts { display: flex; gap: 8px; margin-top: 26px; }
-  .facts span {
-    padding: 6px 14px; border-radius: 999px; font-size: 15px; font-weight: 600;
-    background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.22);
-  }
+  .app img { width: 100px; height: 100px; filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5)); }
+  .app b { display: block; font-size: 50px; line-height: 1.1; font-weight: 700; letter-spacing: -0.01em; }
+  .app small { display: block; margin-top: 4px; font-size: 24px; font-weight: 500; color: rgba(255, 255, 255, 0.75); }
+  h1 { margin: 38px 0 0; white-space: nowrap; font-size: 55px; line-height: 1.22; font-weight: 700; }
+  .caption p { margin: 18px 0 0; font-size: 23px; line-height: 1.6; color: rgba(255, 255, 255, 0.78); }
 
-  /* The README's badges, in its order, under the facts. */
-  .badges { display: flex; gap: 10px; margin-top: 18px; align-items: center; }
-  .badges img { display: block; height: 34px; }
-  /* The terminal, in demo.svg's colours. */
+  /* The README's badges, in its order, under the line. */
+  .badges { display: flex; gap: 10px; margin-top: 30px; align-items: center; }
+  .badges img { display: block; height: 36px; }
+  /* The terminal, in demo.svg's colours, off the right and the bottom. */
   .window {
-    position: absolute; right: 56px; top: 50%; transform: translateY(-50%); width: 690px;
+    position: absolute; left: 534px; top: 56px; width: 820px; height: 640px;
     background: #0d1117; border: 1px solid #30363d; border-radius: 10px; overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(7, 193, 96, 0.08);
   }
   .bar { position: relative; height: 36px; background: #161b22; display: flex; align-items: center; gap: 8px; padding-left: 16px; }
   .bar i { width: 12px; height: 12px; border-radius: 50%; }
-  .bar span { position: absolute; left: 0; right: 0; text-align: center; font: 13px var(--mono); color: #8b949e; }
-  .term { padding: 20px 24px 22px; font: 15px/1.7 var(--mono); color: #c9d1d9; }
-  .line { display: grid; grid-template-columns: 84px 1fr; }
+  .bar span { position: absolute; left: 0; right: 74px; text-align: center; font: 13px var(--mono); color: #8b949e; }
+  .term { padding: 22px 26px; font: 18px/1.66 var(--mono); color: #c9d1d9; }
+  .line { display: grid; grid-template-columns: 100px 1fr; }
   .line.turn { margin-top: 12px; }
   /* The summary, as it will be pasted into the group: full width under Claude's line. */
   .summary { margin: 14px 0 0; padding: 14px 16px; border-left: 3px solid rgba(7, 193, 96, 0.7); background: rgba(255, 255, 255, 0.03); border-radius: 0 6px 6px 0; }
@@ -78,8 +74,6 @@
     <div class="app"><img src="../../docs/app-icon.svg" alt=""><span><b>微信<span class="brand">.skill</span></b><small>让 AI 读懂你的微信</small></span></div>
     <h1>聊天记录，<br><span class="brand">问 Claude 就行。</span></h1>
     <p>在 Claude Code 里搜索、导出、总结<br>你自己的微信聊天，全程在本机完成。</p>
-    <!-- The README's 数据安全 section, in three words. -->
-    <div class="facts"><span>数据不离机</span><span>零网络</span><span>无需管理员</span></div>
     <div class="badges"><img src="../../docs/badge-windows.svg" alt=""><img src="../../docs/badge-claude.svg" alt=""></div>
   </div>
 
