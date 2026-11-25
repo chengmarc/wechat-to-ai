@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- A portfolio tile for a job profile (Boss 直聘, 猎聘, 脉脉): render.py loads this page at 1080 x 1080 into
+     promo/out/portfolio/portfolio.png. It's mostly seen as a thumbnail about 1.5 cm wide, four to a row, so the terminal fills the
+     square and only the name, at the top, has to read at that size; the tag under it is for when the tile is opened.
+     The same layout on every repo's tile, so they read as a set. The terminal is social.html's: the README demo's
+     group-chat summary (docs/demo.svg), its second and third topics only. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --brand: linear-gradient(90deg, #5ee68f, #38db73 45%, #07c160);
+    --sans: "Segoe UI Variable Display", "Segoe UI", "Microsoft YaHei UI", sans-serif;
+    --mono: Consolas, "Cascadia Mono", "Microsoft YaHei UI", monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1080px; height: 1080px; overflow: hidden; }
+  body {
+    position: relative; font-family: var(--sans); color: #fff;
+    background:
+      radial-gradient(60% 45% at 0% 0%, rgba(7, 193, 96, 0.35), transparent 70%),
+      radial-gradient(50% 60% at 100% 100%, rgba(5, 162, 78, 0.25), transparent 70%),
+      linear-gradient(135deg, #0f1a14 0%, #0b120e 55%, #070b09 100%);
+  }
+  body::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1.4px); background-size: 22px 22px;
+    mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.5) 25%, transparent 40%);
+  }
+  .brand { background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* The label: icon and name in the top-left corner. */
+  .label { position: absolute; left: 0; right: 0; top: 0; z-index: 5; display: flex; align-items: center; gap: 30px; padding: 52px 56px 0; }
+  .label img { width: 156px; height: 156px; flex: none; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5)); }
+  .label b { display: block; width: max-content; white-space: nowrap; font-size: 124px; line-height: 0.95; font-weight: 700; letter-spacing: -0.03em; }
+  .label small { display: block; margin-top: 14px; font: 600 40px "Segoe UI Variable Text", "Segoe UI", sans-serif; color: rgba(255, 255, 255, 0.8); }
+
+  /* The terminal, in demo.svg's colours, bleeding off the right and the bottom. */
+  .window {
+    position: absolute; left: 40px; top: 290px; width: 1100px; height: 830px;
+    background: #0d1117; border: 1px solid #30363d; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(7, 193, 96, 0.08);
+  }
+  .bar { position: relative; height: 46px; background: #161b22; display: flex; align-items: center; gap: 10px; padding-left: 20px; }
+  .bar i { width: 15px; height: 15px; border-radius: 50%; }
+  .bar span { position: absolute; left: 0; right: 60px; text-align: center; font: 17px var(--mono); color: #8b949e; }
+  .term { padding: 26px 30px; font: 26px/1.62 var(--mono); color: #c9d1d9; }
+  .line { display: grid; grid-template-columns: 136px 1fr; }
+  .line.turn { margin-top: 14px; }
+  .who { white-space: pre; }
+  .u { color: #7ee787; }
+  .c { color: #79c0ff; }
+  .h { color: #e6edf3; font-weight: 600; }
+  .k { color: #d29922; }
+  .dim { color: #8b949e; }
+  .summary { margin: 18px 0 0; padding: 18px 22px; border-left: 4px solid rgba(7, 193, 96, 0.7); background: rgba(255, 255, 255, 0.03); border-radius: 0 8px 8px 0; }
+  .summary div + .topic { margin-top: 16px; }
+</style>
+</head>
+<body>
+  <div class="window">
+    <div class="bar"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i><span>wechat-to-ai · Claude Code</span></div>
+    <div class="term">
+      <div class="line"><span class="who u">你     ❯</span><span>把群聊 “疯狂星期四” 的消息总结一下，我要发回群里</span></div>
+      <div class="line turn"><span class="who c">Claude ❯</span><span class="dim">已导出 1,933 条消息 · 27 位发言人</span></div>
+      <div class="summary">
+        <div class="h">📝 群聊动态摘要 (2026-08-28)</div>
+        <div>本次覆盖 1933 条消息。首条消息：“v我50 咕咕嘎嘎”</div>
+        <div class="h topic">1️⃣ 【GTA VI 实机演示引发关注】</div>
+        <div>群友 “游戏王不如原神” 起头问有没有人关注，<br>群友 “孙笑川是我爹” 上图，并仔细拆解演示细节。</div>
+        <div class="k">[传送门搜索]:佛罗里达不养闲人</div>
+        <div class="h topic">2️⃣ 【NASDAQ 以及 Claude 上市相关新闻】</div>
+        <div>群友 “吉吉国王” 分享 Claude 相关新闻，后续引发讨论，<br>群友 “马斯克点赞华为” 抱怨自己投资 Tesla 后股价破发。</div>
+        <div class="k">[传送门搜索]:誓死效忠 NASDAQ</div>
+      </div>
+      <div class="line turn"><span></span><span class="dim">→ 无列表符号 · 可直接粘贴回微信，不被折叠 <span class="u">▋</span></span></div>
+    </div>
+  </div>
+  <div class="label">
+    <img src="../../docs/app-icon.svg" alt="">
+    <span><b>WeChat<span class="brand">.skill</span></b><small>Claude Code plugin</small></span>
+  </div>
+</body>
+</html>
