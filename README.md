@@ -1,13 +1,13 @@
 <div align="center">
 
-  <img src="doc/app-icon.svg" width="180"><br>
+  <img src="docs/app-icon.svg" width="180"><br>
 
-  <img src="doc/badge-windows.svg">
-  <img src="doc/badge-claude.svg">
+  <img src="docs/badge-windows.svg">
+  <img src="docs/badge-claude.svg">
 
   <h1>微信.skill - 让 AI 读懂你的微信</h1>
 
-  <img src="doc/demo.svg" width="720">
+  <img src="docs/demo.svg" width="720">
 
 </div>
 
@@ -122,7 +122,7 @@ or misidentification, a **counter-notice may be filed** under 17 U.S.C. § 512(g
 
 7.3 **All takedown notices received in respect of this repository will be
 published in full**, redacted only as to the personal contact details of natural
-persons, in `doc/notices/`. Filing a notice constitutes acknowledgement of this
+persons, in `docs/notices/`. Filing a notice constitutes acknowledgement of this
 practice.
 
 ### §8 — License
