@@ -25,8 +25,8 @@ EDGE_PROFILE = Path(os.environ.get("TEMP", OUT)) / "docs-generator-edge"   # its
 
 # Each image: page, file in promo/out/, size in CSS pixels, and the most bytes it may have.
 PAGES = [
-    ("social.html", "github/social-preview.png", 1280, 640, 1_000_000),   # GitHub's limit is 1 MB
-    ("portfolio.html", "portfolio/portfolio.png", 1080, 1080, 2_000_000),
+    ("social.html", "social-preview.png", 1280, 640, 1_000_000),   # GitHub's limit is 1 MB
+    ("portfolio.html", "portfolio.png", 1080, 1080, 2_000_000),
 ]
 
 
