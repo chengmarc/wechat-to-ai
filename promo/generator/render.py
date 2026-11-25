@@ -6,7 +6,7 @@ with Windows) in headless mode.
     portfolio.html -> portfolio/portfolio.png     1080 x 1080, a tile for the portfolio section of a job profile
                                                   (Boss 直聘, 猎聘, 脉脉), where it's mostly seen as a small square thumbnail
 
-Both are uploaded by hand, so git keeps them.
+Both are uploaded by hand, so git doesn't keep them: render them again to upload them.
 
 Run from the repo root: python promo/generator/render.py
 """

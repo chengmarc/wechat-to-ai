@@ -13,3 +13,6 @@ tools/target/
 
 # 分发物全部入库，随插件一起分发
 !dist/
+
+# The images promo/generator/ renders, all uploaded by hand: made again whenever they're needed, never kept.
+/promo/out/
